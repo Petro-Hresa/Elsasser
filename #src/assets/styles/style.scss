@@ -1,0 +1,17 @@
+
+/* 0-Base*/
+@import "base/base";
+@import "base/mixsins";
+@import "base/variables";
+
+/* 1-Fonts*/
+@import "fonts/fonts";
+
+/* 2-Partials*/
+@import "pages/partials/header";
+@import "pages/partials/footer";
+
+/* 3-Pages*/
+@import "pages/home/_home";
+
+

@@ -1,0 +1,87 @@
+.list {
+    @extend .sectionsBackground;
+    padding-top: 4rem;
+    // .list__inner
+
+    &__inner {
+        padding: 2rem  3.2rem;
+        background: $BackgroundColor-1;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+
+        @media screen and (max-width: $sm) {
+            padding: 2rem  .7rem 0rem;
+        }
+        
+        @media screen and (max-width: $md) {
+            padding: 2rem 2rem 0 2rem;
+        }
+    }
+
+    // .list__title
+
+    &__title {
+        @extend .title-B;
+    }
+
+    // .list__container
+
+    &__container {
+        margin-top: 4.1rem;
+        list-style: none;
+        counter-reset: steps;
+        padding: 0;
+        color:$colorTextList;
+
+        @media screen and (max-width: $lg) {
+           flex-direction: column;
+           margin-top: 2rem;
+        }
+
+        li {
+            counter-increment: steps;
+            position: relative;
+            margin-left: 2rem;
+        }
+
+        li::before {
+            position: absolute;
+            left: -2rem;
+            top: 10px;
+            content: counter(steps);
+            font-size: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 0 1px $colorTextList;
+            width: 14px;
+            height: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: $colorTextList;
+        }
+    }
+
+    // .list__box1
+
+    &__blokA {
+    }
+
+    // .list__item
+
+    &__item {
+        margin-bottom: 2rem;
+        line-height: 35px;
+    }
+
+    // .list__box2
+
+    &__blokB {
+        padding-left: 3rem;
+
+        @media screen and (max-width: $lg) {
+           padding-left: 0;
+        }
+    }
+}
+

@@ -1,0 +1,147 @@
+.contact {
+    padding: 5.3rem 1rem 4.2rem;
+    border: 2px solid #EEF0F4;
+
+    @media screen and (max-width: $lg) {
+        padding: 2.3rem 1rem;
+    }
+
+    // .contact__inner
+
+    &__inner {
+        align-items: center;
+        @media screen and (max-width: $lg) {
+           flex-direction: column;
+         }
+    }
+
+    // .contact__block
+
+    &__blockLeft {
+        font-size: 34px;
+        line-height: 43px;
+        color:$colorTitle-A;
+        margin-bottom: 5.7rem;
+        letter-spacing: -0.4px;
+        padding-right: 3rem;
+ 
+        @media screen and (max-width: $lg) {
+            order: 2;
+            padding: 0 1rem;
+            margin-bottom: 2.7rem;
+          }
+        @media screen and (max-width: $md) {
+            font-size: clamp(1.5rem, 5vw, 2rem); 
+            line-height:clamp(1rem,15vw, 2.3rem);
+         }
+         @media screen and (max-width: $xl) {
+            text-align: center;
+          }
+
+    }
+
+    &__blockCenter{
+        padding-right: 2rem;
+        @media screen and (max-width: $lg) {
+            order: 3;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__blockRight{
+
+        position: relative;
+        padding-bottom: 7%;
+
+        margin-bottom: 4.6rem;
+        @media screen and (max-width: $sm) {
+            width: 9rem;
+            height: 3.8rem;
+            order: 1;
+            padding-bottom: 10%;
+
+        }
+        @media screen and (max-width: $lg) {
+            order: 1;
+            padding-bottom: 10%;
+            margin-bottom: 1.5rem;
+
+        }
+    }
+
+    // .contact__text
+
+    &__text {
+        @extend .text;
+        font-weight: 500;
+        line-height: 32px;
+        @media screen and (max-width: $md) {
+          padding: 0 1rem;
+        }
+    }
+
+    // .contact__paragraph
+
+    &__paragraph {
+        @extend.paragraph
+    }
+
+
+    &__link {
+        color:$colorTitle-A;
+    }
+
+    // .contact__button
+
+    &__button {
+       @extend .buttons__item;
+       text-transform: none;
+       margin-top: 2rem;
+       padding-left: 6.7rem;
+       padding-right: 6.7rem;
+       position: relative;
+
+        @media screen and (max-width: $sm) {
+           width: 100%;
+        }
+
+        span{
+           position: absolute;
+           left: 0;
+           top: 50%;
+           transform: translate(0 -50%);
+           width: 26%;
+           border-top: 2px solid #FAFBFE;
+           border-radius: 0 5px 5px 0;
+
+            &::before,
+            &::after{
+               content: '';
+               position: absolute;
+               width: 9px;
+               border-top: 2px solid #FAFBFE;
+               right: 0;
+            }
+
+            &::before{
+               transform: rotate(45deg);
+               top: -6px;
+            }
+
+            &::after{
+                transform: rotate(-45deg);
+                bottom: -4px;
+            }
+        }
+    }
+
+    // .contact__logo
+
+    &__logo {
+        object-fit: contain;
+    }
+}
+

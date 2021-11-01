@@ -1,0 +1,85 @@
+.cards {
+    @extend .sectionsBackground;
+    padding-top: 4rem;
+ 
+    // .cards__inner
+    &__inner {
+        max-width: 1230px;
+    }
+
+    // .cards__title
+
+    &__title {
+        @extend .title-B;
+    }
+
+    // .cards__container
+
+    &__container {
+        margin-top: 2rem;
+        display: grid;
+        gap: .5rem;
+
+        @media screen and (min-width: $lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (min-width: $xl) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    // .cards__item
+
+    &__item {
+
+    }
+}
+
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    min-height: 8.2rem;
+    padding: .2rem 2rem;
+    transition: background-color .2s;
+
+    &:hover{
+        background-color: $BackgroundColor-2;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: .2rem 1rem;
+    }
+
+    // .card__wrapImg
+
+    &__wrapImg {
+        @media screen and (max-width: $lg) {
+           display: flex;
+           justify-content: center;
+        }
+    }
+
+    // .card__img
+
+    &__img {
+    }
+
+    // .card__text
+
+    &__text {
+        margin-left: .5rem;
+        font-size: 19px;
+        line-height: 32px;
+        color:$colorTextCard;
+        letter-spacing: -0.4px;
+
+        @media screen and (max-width: $sm) {
+            margin-left: 1rem;
+        }
+    }
+}

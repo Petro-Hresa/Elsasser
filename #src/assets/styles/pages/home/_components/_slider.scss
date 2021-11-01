@@ -1,0 +1,85 @@
+.slider{
+    @extend .sectionsBackground;
+    padding-top: 4rem;
+
+    &__inner{
+        max-width: 37rem;
+        padding-top: .5rem;
+
+        .carousel-inner{
+            border-radius: 16px;
+            margin-top: 1.3rem;
+            max-height: 48rem;
+
+            @media screen and (min-width: $md) {
+                margin-top: 2.3rem;
+            }
+        }        
+    }
+
+    &__title{
+        @extend .title-B;
+    }
+   
+    &__switch{
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    &__buttons{
+        position: relative;
+        max-width: 16rem;
+
+        @media screen and (max-width: $md) {
+           display: none;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next{
+            width: 126px;
+            height: 78px;   
+            background: #FFFFFF;
+            box-shadow: 0px 0px 21px rgba(64, 68, 75, 0.14);
+            border-radius: 8px;
+            border:none;
+        }
+    }
+
+    &__points{
+        position: relative;
+        height: 80px;
+
+        @media screen and (max-width: $md) {
+           height: 55px;
+        }
+
+        div{
+           top: 0;
+           left: 0;
+           height: 14px;
+           margin: 0;
+          
+            @media screen and (min-width: $md) {
+                justify-content: flex-start;
+                padding-left: 2rem;
+            }
+
+            button{
+                padding: 0;
+                width: 9px;
+                height: 9px;
+                background: #80ABFF;
+                opacity: 0.35;
+                border: 1px solid #0045AC;
+                border-radius: 50%;
+                margin-left: 1.2rem;
+
+                @media screen and (min-width: $md) {
+                    width: 12px;
+                    height: 12px;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.fourth {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: hidden;
+    padding: 0 1rem;
+    position: relative;
+
+    @media screen and (min-width: $sm) {
+        padding: 0 2rem;
+    }
+
+    // .second__inner
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+
+        @media screen and (max-width: $lg) {
+            flex-direction: column-reverse;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding-top: 2rem ;
+        }
+
+        @media screen and (min-width: $sm) {
+            padding-top: 8.9% ;
+        }
+
+        @media screen and (min-width: $lg) {
+            padding: 0;
+            padding-top: 5.5rem;
+        }
+    }
+
+    &__wraoImg{
+        position: relative;
+
+        @media screen and (max-width: 488%){  
+            right: 0;
+        }
+
+        @media screen and (min-width: 488px) and (max-width: $lg){  
+            right: -3rem;
+        }
+    
+        @media screen and (max-width: $lg){
+            min-height: 10rem;
+            margin-bottom: 2rem;
+        }
+    
+    }
+
+    // .second__image
+
+    &__image {
+        position: relative;
+        width: 50rem;
+        
+        @media screen and (max-width: 375px){  
+            left: -12em;
+        }
+
+        @media screen  and (max-width: 628px){
+            min-width: 33rem;
+            min-height: 12rem;
+        }
+
+        @media screen and (max-width: $lg) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $lg) {
+            padding-bottom: 35%;
+        }
+
+        @media screen and (min-width: $lg) {
+            padding-bottom: 79%;
+        }
+
+        img{
+            object-position: -7.3rem -16rem;
+            @media screen and (max-width: $lg){
+                object-position:center;
+            }
+        }
+    }
+
+    // .second__content
+
+    &__content {
+        @media screen and (min-width: $lg) {
+            padding-right: 5.1%;
+        }
+    }
+
+    // .second__title
+
+    &__title {
+        @extend .title-A;
+    }
+
+    // .second__text
+
+    &__text {
+        @extend .text;
+        line-height: 32px;
+        color: $colorParagraphSecond;
+        margin: 1rem 0 1.4rem;
+    }
+
+    // .second__paragraph
+
+    &__paragraph {
+        @extend .paragraph;
+    }
+}
+

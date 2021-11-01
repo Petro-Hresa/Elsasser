@@ -1,0 +1,52 @@
+.buttons {
+    @extend .sectionsBackground;
+    padding: 4.5rem 1rem;
+
+    @media screen and (max-width: $md) {
+        padding-top: 0rem;
+	}
+
+    // .buttons__inner
+
+    &__inner {
+        padding: 0;
+    }
+
+    // .buttons__title
+
+    &__title {
+        @extend .title-B;
+        letter-spacing: 2.42px;
+    }
+
+    // .buttons__container
+
+    &__container {
+        @extend .cards__container;
+        padding-top: 1rem;
+
+        @media screen and (max-width: $md) {
+           margin-top: .4rem;
+        }
+        @media screen and (min-width: $md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // .buttons__item
+
+    &__item {
+        background: linear-gradient(180deg, #0C5CD6 0%, rgba(0, 56, 140, 0) 100%), #004FC7;
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.21);
+        border-radius: 12px;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 40px;
+        letter-spacing: 1.42px;
+        color: #FAFBFE;
+        text-transform: uppercase;
+        padding: .6rem;
+    }
+}
+

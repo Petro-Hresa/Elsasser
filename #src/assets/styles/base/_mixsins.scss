@@ -1,0 +1,31 @@
+// *************************
+// 0-Conect_fonts
+// 1-Background_imagis
+// 2-Flex
+// *************************
+
+// 0-conect_fonts
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+// 1-Background_imagis
+@mixin bg-img(){
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+// 2-Flex
+@mixin d-flex($jc,$ai){
+	display: flex;;
+	justify-content:$jc;
+	align-items: $ai;;
+}

@@ -1,0 +1,91 @@
+
+#body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#main{
+	flex:1 1 auto;
+}
+
+.container-fluid{
+
+}
+
+.container{
+	max-width: 1200px;
+
+	@media screen  and(max-width: $sm){
+		padding: 0;
+	}
+
+	@media screen and (max-width: $lg) {
+		max-width: $md;
+	}
+}
+
+
+.title-A{
+	font-size: 20px;
+	color: $colorTitle-A;
+	font-family: $fontFamily-3;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 40px;
+	letter-spacing: 2.42px;
+	text-transform: uppercase;
+
+	@media screen and (max-width: $lg) {
+		text-align: center;
+	}
+}
+
+.title-B{
+	@extend .title-A;
+	font-family: $fontFamily-3;
+	font-weight: 500;
+	font-size: 28px;
+	letter-spacing: 4.42px;
+	color: $colorTitle-B;
+	text-align: center;
+	@media screen and (max-width: $md) {
+		font-size: clamp(1.2rem, 5vw, 1.6rem); 
+	}
+
+}
+
+.text{
+	font-size: 17px;
+	letter-spacing: -0.4px;
+	color: #020303;
+}
+
+.img{
+	position: absolute;
+	object-fit: cover;
+	object-position: top left;
+	top: 0;
+	left: 0;
+}
+
+.paragraph{
+	margin-top: 2rem;
+	&:first-child{
+		margin: 0;
+	}
+}
+
+.sectionsBackground{
+	background:$BackgroundColor-2;
+}
+
+@import '_components/first';
+@import '_components/second';
+@import '_components/third';
+@import '_components/fourth';
+@import '_components/cards';
+@import '_components/list';
+@import '_components/slider';
+@import '_components/buttons';
+@import '_components/contact';

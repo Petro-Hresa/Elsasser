@@ -1,0 +1,83 @@
+.second { 
+    display: flex;
+    align-items: flex-start;
+
+    // .second__inner
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+
+        @media screen and (max-width: $lg) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding-top: 2rem ;
+        }
+
+        @media screen and (min-width: $sm) {
+            padding-top: 8.9% ;
+        }
+
+        @media screen and (min-width: $lg) {
+            padding-top: 8.9rem;
+            padding-bottom: 2.2rem;
+        }
+    }
+
+    // .second__image
+
+    &__image {
+        position: relative;
+        padding-bottom: 40%;
+
+        @media screen and (max-width: 512px) {
+            width: 100%;
+            padding-bottom: 65%;
+        }
+
+        @media screen  and (min-width: 512px) and (max-width: $lg) {
+            width: 27rem;
+            height: 24rem;
+        }
+
+        @media screen and (max-width: $lg) {
+            margin-bottom: 2.8%;
+        }
+
+        img{
+            object-position: top;
+        }
+    }
+
+    // .second__content
+
+    &__content {
+        @media screen and (min-width: $lg) {
+            padding-left: 6.1%;
+        }
+    }
+
+    // .second__title
+
+    &__title {
+        @extend .title-A;
+
+    }
+
+    // .second__text
+
+    &__text {
+        @extend .text;
+        line-height: 32px;
+        color: $colorParagraphSecond;
+        margin: 1rem 0 1.4rem;
+    }
+
+    // .second__paragraph
+
+    &__paragraph {
+        @extend .paragraph;
+    }
+}
+

@@ -1,0 +1,117 @@
+                                                                   
+.first {
+
+    // .first__inner
+ 
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+
+        @media screen and (max-width: $sm) {
+            padding-top: 2.7rem;
+        }
+
+        @media screen and (min-width: $sm) {
+            padding-top: 5.9% ;
+        }
+
+        @media screen and (min-width: $lg) {
+            padding-top: 5.7rem;
+        }
+    }
+ 
+    // .first__content
+    &__content {
+       @media screen and (min-width: $lg) {
+           padding-right: 2rem;
+       }
+    }
+     
+    .content-lines{
+        content:'';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 66%;
+        transform: translateX(-50%);
+        border-top: 7px solid #EDEFF3;
+
+        @media screen and (min-width: $lg) {
+            left: 0;
+            transform: translateX(0);
+            width: 40%;
+        }
+    }
+ 
+    // .first__title
+ 
+    &__title {
+        @extend .title-A;
+    	font-size: 48px;
+        line-height: 4rem;
+        letter-spacing: -0.4px;   
+        position: relative;
+        text-transform: none;
+
+        @media screen and (max-width: $lg) {
+            font-size: clamp(1.5rem, 10vw, 2.5rem); 
+            line-height:clamp(1rem,15vw, 3.3rem);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+         }
+
+        @media screen and (min-width: $lg) {
+            padding-bottom: 10%;
+        }
+  
+        &::before{
+            @extend .content-lines;
+        }
+    }
+ 
+    // .first__text
+ 
+    &__text {
+        position: relative;
+        padding: 1.3rem 0;
+        color:$colorParagraphFirst;
+        font-family: $fontFamily-2;
+        line-height: 32px;
+
+        @media screen and (min-width: $lg) {
+            padding: 2.8rem 0 11% 0;
+        }
+
+        &::before{
+            @extend .content-lines;
+            @media screen and (max-width: $lg) {
+               display: none;
+            }
+        }
+    }
+ 
+    // .first__paragraph
+ 
+    &__paragraph {
+    }
+ 
+    // .first__image
+ 
+    &__image {
+        position: relative;
+        padding-bottom: 42%;
+
+        @media screen and (max-width: 512px) {
+            padding-bottom: 85%;
+        }
+
+        @media screen  and (min-width: 512px) and (max-width: $lg) {
+            width: 27rem;
+            height: 24rem;
+        }
+
+        img{
+            object-position: 0 -2rem;
+        }
+    }
+ }
